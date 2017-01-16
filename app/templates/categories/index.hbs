@@ -1,0 +1,25 @@
+<h1> categories index route</h1>
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <button>add new category</button>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            {{#each model as |category|}}
+            
+                 {{custom-thumbnail
+                     imageUrl=category.imageUrl
+                     title=category.title
+                     data=category
+                     action='viewDetails'}}
+                 
+            {{/each}}
+        </div>
+        <!-- /.row -->
+
+        
